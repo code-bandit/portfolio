@@ -1,28 +1,44 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import TopNav from "./components/sections/TopNav";
+import Footer from "./components/sections/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
-import Navigation from "./components/Navigation";
-import styled from "styled-components";
-import About from "./pages/About";
-import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+
+const AppShell = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      requestAnimationFrame(() => {
+        const el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
+  return (
+    <>
+      <TopNav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+      <WhatsAppButton />
+    </>
+  );
+};
 
 function App() {
   return (
-    <Application className="App">
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutme" element={<About />} />
-          <Route path="/myresume" element={<Resume />} />
-          <Route path="/contactme" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </Application>
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
   );
 }
-const Application = styled.div`
-  display: flex;
-  overflow: hidden;
-`;
+
 export default App;
