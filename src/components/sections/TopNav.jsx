@@ -7,7 +7,7 @@ const links = [
   { to: "/#manifest", label: "ABOUT" },
   { to: "/#experience", label: "EXPERIENCE" },
   { to: "/#projects", label: "PROJECTS" },
-  { to: "/#specs", label: "SPECS" },
+  { to: "/#specs", label: "STACK" },
   { to: "/contact", label: "CONTACT" },
 ];
 
