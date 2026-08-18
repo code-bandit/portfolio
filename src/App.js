@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import TopNav from "./components/sections/TopNav";
 import Footer from "./components/sections/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import TransitionProvider from "./components/transitions/TransitionProvider";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 
@@ -36,7 +37,9 @@ const AppShell = () => {
 function App() {
   return (
     <BrowserRouter>
-      <AppShell />
+      <TransitionProvider>
+        <AppShell />
+      </TransitionProvider>
     </BrowserRouter>
   );
 }

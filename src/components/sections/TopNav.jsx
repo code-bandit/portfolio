@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import TransitionLink from "../transitions/TransitionLink";
 import ThemeToggle from "../ThemeToggle";
 
 const links = [
@@ -14,14 +14,14 @@ const links = [
 const TopNav = () => {
   return (
     <Nav>
-      <Link className="system-id" to="/">
+      <TransitionLink className="system-id" to="/">
         CODE_BANDIT_SYSTEM_V.01
-      </Link>
+      </TransitionLink>
       <div className="links">
         {links.map((link) => (
-          <Link key={link.to} to={link.to}>
+          <TransitionLink key={link.to} to={link.to}>
             {link.label}
-          </Link>
+          </TransitionLink>
         ))}
       </div>
       <div className="right">
