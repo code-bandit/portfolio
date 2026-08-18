@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { FaWhatsapp } from "react-icons/fa";
 
+const PREFILLED_MESSAGE = "Hi Code Bandit, I came across your portfolio and would like to get in touch.";
+
 const WhatsAppButton = () => {
   return (
     <Fab
-      href="https://wa.me/2348082696280"
+      href={`https://wa.me/2348082696280?text=${encodeURIComponent(PREFILLED_MESSAGE)}`}
       target="_blank"
       rel="noreferrer noopener"
       aria-label="Chat on WhatsApp"
