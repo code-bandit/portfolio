@@ -4,11 +4,11 @@ import TransitionLink from "../transitions/TransitionLink";
 import ThemeToggle from "../ThemeToggle";
 
 const links = [
-  { to: "/#manifest", label: "MNFST" },
-  { to: "/#experience", label: "EXP/LOG" },
-  { to: "/#projects", label: "PRJ/LOG" },
+  { to: "/#manifest", label: "ABOUT" },
+  { to: "/#experience", label: "EXPERIENCE" },
+  { to: "/#projects", label: "PROJECTS" },
   { to: "/#specs", label: "SPECS" },
-  { to: "/contact", label: "CNT/LNK" },
+  { to: "/contact", label: "CONTACT" },
 ];
 
 const TopNav = () => {
