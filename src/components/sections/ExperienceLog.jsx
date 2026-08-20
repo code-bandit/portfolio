@@ -18,7 +18,7 @@ const nodes = [
   {
     dates: "ONGOING",
     org: "AegisCare",
-    title: "Co-Founder & Lead Developer",
+    title: "Lead Developer",
     bullets: [
       "Designed and developed a multi-role healthcare coordination platform (Patient, Nurse, Hospital, Hospital Admin) across 29+ pages, built on React, TypeScript, Node.js, Prisma, and PostgreSQL.",
       "Implemented access/refresh token auth, protected routes, and role-based authorization across distinct user roles.",
@@ -28,7 +28,7 @@ const nodes = [
   {
     dates: "ONGOING",
     org: "Ecstasy",
-    title: "Co-Founder & Lead Developer",
+    title: "Lead Developer",
     bullets: [
       "Lead development of a React Native mobile app backed by TypeScript, Node.js, Prisma, and PostgreSQL.",
       "Own architecture, authentication, API integration, and core mobile functionality.",

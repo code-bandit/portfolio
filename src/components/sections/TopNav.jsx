@@ -15,7 +15,7 @@ const TopNav = () => {
   return (
     <Nav>
       <TransitionLink className="system-id" to="/">
-        CODE_BANDIT_SYSTEM_V.01
+        CODE_BANDIT_V.01
       </TransitionLink>
       <div className="links">
         {links.map((link) => (
